@@ -1,0 +1,26 @@
+PERGUNTAS - BRAINSTORM:
+
+1) Quais episódios mais bem votados?
+2) Qual temporada tem mais episódios?
+3) Qual temporada teve a maior média de votos?
+4) Qual temporada mais teve votos?
+5) Quais atores mais apareceram na série?
+6) Qual episódio mais curto e qual episódio mais longo?
+7) Qual a média de rating de cada diretor?
+8) Qual diretor dirigiu mais episódios e qual dirigiu menos?
+9) Qual diretor tem o maior rating e o menor?
+10) Qual tempo total da série?
+11) Qual a média de avaliação total da série?
+12) Qual o número total de votantes avaliando a série?
+13) Qual a média de votantes da série?
+14) Qual avaliação do último episódio da série?
+15) Quantos porcento da série é avaliada abaixo de 8?
+16) Qual porcentagem de atores que apareceram em apenas um episódio?
+17) Qual a quantidade total de episódios?
+18) Quais os 10 personagens/atores que mais apareceram na série?
+19) Quantas regiões existem em Westeros?
+20) Quantas casas vivem em cada região? (fazer relacionando o mapa de Westeros)
+21) Quais casas vivem em regiões desconhecidas?
+22) Qual ano com mais episódios?
+23) Qual personagem foi a estrela número 1 com mais frequência na série?
+24) Qual episódio mais assistido e qual seu Rating?
