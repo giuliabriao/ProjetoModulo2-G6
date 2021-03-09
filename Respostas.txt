@@ -1,0 +1,103 @@
+3) Qual temporada teve a maior média de votos?
+
+SELECT Season, AVG(Rating) AS avg_rating
+FROM episodes
+GROUP BY Season
+ORDER BY avg_rating DESC;
+
+Season 	avg_rating
+4	9.3
+1	9.1
+7	9.1
+6	9.06
+3	9.05
+2	8.96
+5	8.83
+8	6.433333333333334
+
+5) Quais os 10 atores que mais apareceram na série?
+
+SELECT `Actor/ess`, MAX(Episodes_appeared) AS max_episodes_appeared
+FROM characters
+GROUP BY `Actor/ess`
+ORDER BY max_episodes_appeared DESC
+LIMIT 10;
+
+RESPOSTA: 
+
+Peter Dinklage 67 episodios
+Lena Headey 62
+Emilia Clarke 62
+Kit Harington 62
+Sophie Turner 59
+Maisie Williams 59
+Nikolaj Coster-Waldau 55
+Iain Glen 52
+John Bradley 48
+Alfie Allen 47
+
+8) Qual diretor dirigiu mais episódios e qual dirigiu menos?
+
+SELECT Director, COUNT(Episode) AS directed_episodes
+FROM episodes
+GROUP BY Director
+ORDER BY directed_episodes ASC;
+
+D.B. Weiss	1
+Timothy Van Patten	2
+Matt Shakman	2
+Jack Bender	2
+Daniel Sackheim	2
+David Petrarca	2
+Michael Slovis	2
+Neil Marshall	2
+David Benioff	2
+Brian Kirk		3
+Michelle MacLaren	4
+Alik Sakharov	4
+Daniel Minahan	5
+Alex Graves	6
+Mark Mylod	6
+Jeremy Podeswa	6
+Miguel Sapochnik	6
+Alan Taylor	7
+David Nutter	9
+
+9) Qual diretor tem o maior rating e o menor?
+
+SELECT Director, MAX(Rating) AS higher_rating
+FROM episodes
+GROUP BY Director
+ORDER BY higher_rating DESC;
+
+Miguel Sapochnik	9.9
+David Nutter	9.9
+Matt Shakman	9.8
+Alex Graves	9.7
+Jack Bender	9.7
+Neil Marshall	9.7
+Alik Sakharov	9.7
+Alan Taylor	9.6
+Jeremy Podeswa	9.4
+Mark Mylod	9.2
+Daniel Minahan	9.2
+Timothy Van Patten	9.1
+D.B. Weiss	9.1
+Daniel Sackheim	9.1
+Brian Kirk		9.1
+Michelle MacLaren	9
+David Benioff	8.9
+David Petrarca	8.8
+Michael Slovis	8.5
+
+10) Qual tempo total da série?
+
+SELECT SUM(Duration) FROM episodes;
+
+Duração Total: 4214 minutes ou 70 horas de série
+
+11) Qual a média de avaliação total da série?
+
+SELECT AVG(Rating) FROM episodes;
+
+Média: 8.839726027397258
