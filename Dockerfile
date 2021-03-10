@@ -1,4 +1,4 @@
-FROM mysql:8.0
+docker stop 4b2FROM mysql:8.0
 
 ENV MYSQL_DATABASE='GOT-db'
 
