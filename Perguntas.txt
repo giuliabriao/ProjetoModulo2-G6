@@ -24,3 +24,26 @@ PERGUNTAS - BRAINSTORM:
 22) Qual ano com mais episódios?
 23) Qual personagem foi a estrela número 1 com mais frequência na série?
 24) Qual episódio mais assistido e qual seu Rating?
+
+
+
+
+-- 1) Quais episódios mais bem votados? 
+select title, season, episode, rating from episodes where rating > 9.5; -- feito
+
+-- 2) Qual temporada tem menos episódios?
+select distinct season, count(episode) as 'total de episodios' from episodes group by season order by season desc; -- feito
+
+-- 4) Qual temporada mais teve votos?
+select distinct season, sum(votes) as 'Temporada com mais votos' from episodes group by season order by sum(votes) desc; -- feito;
+
+
+-- 6) Qual episódio mais curto e qual episódio mais longo?
+select Title, duration from episodes order by duration desc limit 1;
+select Title, duration from episodes order by duration asc limit 1;
+
+-- 7) Qual a média de rating de cada diretor?
+select Director, AVG(Rating) as 'media de rating' from episodes group by director; -- feito
+
+-- 12) Qual o número total de votantes avaliando a série?
+select sum(votes) as 'total de votos' from episodes; -- feito
