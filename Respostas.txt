@@ -1,0 +1,46 @@
+Respostas:
+
+13) Qual a média de votantes da série? '
+
+
+SELECT AVG(Votes) as 'Média de votantes' FROM Episodes GROUP BY 'Média de votantes'
+
+
+
+15) Quantos porcento da série é avaliada abaixo de 8? ' 
+
+SELECT (COUNT(episode) * 100 / (SELECT COUNT(episode) FROM episodes)) as porcentagem
+FROM episodes
+WHERE rating < 8;
+
+
+19) Quantas regiões existem em Westeros?
+
+SELECT COUNT(distinct Region) FROM houses 
+
+
+
+21) Quais casas vivem em regiões desconhecidas? '
+
+SELECT House_name From houses where Region = 'Unknown'
+
+
+22) #QUAL O RATING MAIS FREQUENTE DA SERIE?
+
+
+SELECT rating, COUNT(episode) AS episodios
+FROM episodes
+GROUP BY rating
+ORDER BY episodios DESC
+LIMIT 1;
+
+
+
+23) Qual personagem foi a estrela número 1 com mais frequência na série? '
+
+SELECT Distinct Star_1, COUNT(Star_1) AS Atores FROM episodes GROUP BY Star_1 ORDER BY Atores DESC
+
+
+
+
+  
